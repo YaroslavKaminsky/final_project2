@@ -1,0 +1,30 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}
+Test Forms
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+
+      <h1 class="pt-5 pb-2">{{ name }}</h1>
+
+      <p class="lead">{{ counter + 1 }}. {{question.question}}</p>
+
+      <p class="lead">1. {{ question.answers[0] }}      2. {{ question.answers[1] }}</p>
+
+      <p class="lead">3. {{ question.answers[2] }}      4. {{ question.answers[3] }}</p>
+
+      {{ wtf.quick_form(test_) }}
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
